@@ -1,0 +1,136 @@
+
+\documentclass[a4paper]{article}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{multicol}
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+\usepackage{tcolorbox}
+
+\begin{document}
+\author{Ibrahim Abou Elenein}
+\title{\textbf{Sample Contest}}
+\maketitle
+\noindent
+\begin{enumerate}
+
+
+\item Define The operation $a@b$ to be $3 + ab + a + 2b$. There exists a number
+$x$ such that $x@b =1$ for all $b$. Find $x$.
+\begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=white!95!black]
+
+$\textit{ Sol. }$
+
+\[
+    3 + xb + x + 2b = 1
+\]
+\[
+    xb + x + 2b + 2 = 0 \Rightarrow (x+2)(b+1) = 0
+\]
+We see that if $x=-2$, then this expression is always true. Indeed
+plugging $-2$ for $x$ yeilds $3-2b-2+2b=1$ so The answer is $-2$
+
+\end{tcolorbox}
+
+\item Let $y = x^2 + bx +c$ be a quadratic function. it has only one real root. if $b$
+is postive, find $\dfrac{b+2}{\sqrt{c} + 1}$.
+
+\begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=white!95!black]
+
+$\textit{ sol. }$
+
+since it has only one real root, we know that the discriminant $b^2-4ac$ is $0$
+since $a=1$, we have $b^2 = 4c$ thus $\dfrac{b+2}{\sqrt{c} + 1} = \dfrac{2\sqrt{c} + 2}{\sqrt{c} + 1} = 2$
+\end{tcolorbox}
+
+
+\item A circle of nonzero radius r has a circumference numerically equal to
+$\dfrac{1}{3}$ of its area. What is its area?
+
+\begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=white!95!black]
+    $  \frac{1}{3} $Area =  $\frac{1}{3} \pi r^2$ = $2\pi r$
+    \[
+       \Rightarrow r = 6 \Rightarrow \text{Area} = \pi r^2 = \pi 6^2 = 36\pi
+    \]
+\end{tcolorbox}
+
+\item Let set $\mathcal{A}$ be a 90-element subset of $\{1,2,3,\ldots,100\},$ and let $S$ be the sum of the elements of $\mathcal{A}.$ Find the number of possible values of $S.$
+
+\begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=white!95!black]
+    The smallest $S$ is $1+2+ \ldots +90 = 91 \cdot 45 = 4095$. The largest $S$
+    is $11+12+ \ldots +100=111\cdot 45=4995$. All numbers between $4095$ and
+    $4995$ are possible values of S, so the number of possible values of S is
+    $4995-4095+1=901$.
+
+\end{tcolorbox}
+
+
+
+
+\item A \textit{gorgeous} sequence is a sequence of 1’s and 0’s such that there are no consecutive 1’s. For
+instance, the set of all gorgeous sequences of length 3 is {[1, 0, 0], [1, 0, 1], [0, 1, 0], [0, 0, 1], [0, 0, 0]}.
+Determine the number of gorgeous sequences of length 7.
+
+\begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=white!95!black]
+    Let $S_n$ be the number of $gorgeous$ sequences of length $n$.
+    Looking at aribtary sequence of length $n$, we see that
+    it either strats with $1$ or $0$. If starts with $0$,
+    Then we can simply take all sequences of length $n-1$ and
+    append it to the $0$.
+    If it starts with $1$, Then the next value must be. After
+    that we can take all sequences of length $n-2$ and append it
+    to the $[0, 1]$. So $S_n = S_{n-1} + S_{n-2}$
+    The first two terms are $S_0 = 1$ and $S_1 = 2$
+    so $S_n$ is just fibonacci numbers. so recuresivly we have
+    $S_7 = 34$
+\end{tcolorbox}
+ \item A \(8 \times 8\) chessboard with the northeast and southwest corner unit squares removed is given. Is it
+          possible to partition such a a board into thirty-one unit dominoes(where a domino is a \(1 \times 2\) rectangle)?
+          Show your work.
+
+\begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=white!95!black]
+    For such board, we can color the unit squares alternatively.
+    in black and white.
+    Each domino will cover two adjacent squares one with color
+    balck and one with color white. So if 31 dominoes can over the board
+    there should be 31 squares with black color and 31 squares with white color.
+    However, in the board we have  32 squares of color balck
+    and 30 of white, So the task is impossible.
+\end{tcolorbox}
+\item The function $f$ satifies
+\[
+    f(x) + f(2x+y) + 5xy = f(3x - y) + 2x^2 + 1
+\]
+for all real numbers $x, y$. Determine the vlaue of $f(10)$
+
+\begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=white!95!black]
+    Setting $x = 10$ and $y= 5$ gives
+    \[
+        f(10) + f(25)+ 250  =f(25) + 200 +1
+    \]
+    from which gives $f(10) = -49$
+
+\end{tcolorbox}
+\item Let
+\[
+    a = \underbrace{19191919191\dots1919}_\text{19 is repeted 3838 times}
+\]
+What is the reminder of $a$ when divided by $13$?
+\begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=white!95!black]
+    Not that $13 | 191919$. Thus $13 | \underbrace{1919191\dots1919100}_{19
+    \text{ is repeated 3837 times} }$ since $3| 3837$.
+    Howeveer $a = \underbrace{19191919 \dots 191900 }_{\text{19 is repeated 3837}}+ 19$ so the reminder
+    whwn $a$ is divided by $13$
+    is the same as the reminder when $19$ is divided by $13$ which is 6.
+\end{tcolorbox}
+\end{enumerate}
+\end{document}
